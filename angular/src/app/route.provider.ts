@@ -15,6 +15,13 @@ function configureRoutes(routesService: RoutesService) {
         order: 1,
         layout: eLayoutType.application,
       },
+      {
+        path: '/dashboards',
+        name: '::Menu:Dashboard',
+        iconClass: 'fas fa-chart-line',
+        order: 2,
+        layout: eLayoutType.application,
+      },
     ]);
   };
 }

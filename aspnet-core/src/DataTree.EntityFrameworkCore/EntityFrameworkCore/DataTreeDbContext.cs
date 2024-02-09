@@ -1,4 +1,5 @@
 ﻿using DataTree.Organizations;
+using DataTree.SubMembers;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -56,6 +57,7 @@ public class DataTreeDbContext :
     #endregion
 
     public DbSet<Organization> Organizations { get; set; }
+    public DbSet<SubMember> SubMembers { get; set; }
 
     public DataTreeDbContext(DbContextOptions<DataTreeDbContext> options)
         : base(options)
@@ -85,6 +87,12 @@ public class DataTreeDbContext :
             b.ToTable(DataTreeConsts.DbTablePrefix + "Organizations", DataTreeConsts.DbSchema);
             b.ConfigureByConvention(); //auto configure for the base class props
             //...
+        });
+
+        builder.Entity<SubMember>(b =>
+        {
+            b.ToTable(DataTreeConsts.DbTablePrefix + "SubMembers", DataTreeConsts.DbSchema);
+            b.ConfigureByConvention();
         });
     }
 }

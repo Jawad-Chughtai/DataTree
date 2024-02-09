@@ -1,0 +1,198 @@
+<h1>Welcome Back,</h1>
+<p>Here is the information</p>
+
+<div class="row">
+    <div class="col-md-12 d-flex justify-content-inline mb-1">
+        <div class="col-md-3 me-1">
+            <div class="card">
+                <div class="card-body">
+                    <h4>240</h4>
+                    <h5>Total Owned Apps</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 me-1">
+            <div class="card">
+                <div class="card-body">
+                    <h4>240</h4>
+                    <h5>Total Owned Apps</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 me-1">
+            <div class="card">
+                <div class="card-body">
+                    <h4>240</h4>
+                    <h5>Total Owned Apps</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 me-1">
+            <div class="card">
+                <div class="card-body">
+                    <h4>240</h4>
+                    <h5>Total Owned Apps</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+    <div class="card mb-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <!-- <div class="col-md-6"> -->
+
+                        <h4>Total Vulnerablilities</h4>
+                        <div id="chart">
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                                [labels]="chartOptions.labels" [responsive]="chartOptions.responsive"></apx-chart>
+                        </div>
+                        <!-- </div> -->
+
+                        <!-- <div class="col-md-6">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Severity</th>
+                                    <th>In #s</th>
+                                    <th>In %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+    
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <!-- <div class="col-md-6"> -->
+
+                        <h4>Top 5 Vulnerablilities</h4>
+                        <div id="chart">
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                                [labels]="chartOptions.labels" [responsive]="chartOptions.responsive"></apx-chart>
+                        </div>
+                        <!-- </div> -->
+
+                        <!-- <div class="col-md-6">
+    
+                    </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="card mb-2">
+    <div class="card-body">
+        <div class="row">
+            <div id="chartLine">
+                <apx-chart [series]="ChartLineOptions.lineseries" [chart]="ChartLineOptions.chartLine"
+                    [xaxis]="ChartLineOptions.xaxis" [stroke]="ChartLineOptions.stroke"
+                    [tooltip]="ChartLineOptions.tooltip" [dataLabels]="ChartLineOptions.dataLabels"
+                    [legend]="ChartLineOptions.legend" [markers]="ChartLineOptions.markers"
+                    [grid]="ChartLineOptions.grid" [yaxis]="ChartLineOptions.yaxis"
+                    [title]="ChartLineOptions.title"></apx-chart>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Total Direct Reports For  _ _ _ _ Count (4)</h2>
+
+<div class="col-md-12 d-flex justify-content-inline mb-1">
+    <div class="col-md-3 me-1">
+        <div class="card">
+            <div class="card-body">
+                <h4>A</h4>
+                <h5>Total Vuln Apps - 98</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 me-1">
+        <div class="card">
+            <div class="card-body">
+                <h4>240</h4>
+                <h5>Al Vuln Apps - 10</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 me-1">
+        <div class="card">
+            <div class="card-body">
+                <h4>R</h4>
+                <h5> Apps -2</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 me-1">
+        <div class="card">
+            <div class="card-body">
+                <h4>- H</h4>
+                <h5>Total Vuln Apps - 0</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h2>Top 5 Valnerabilities Details </h2>
+        <ngx-datatable >
+            <ngx-datatable-column name="{{ '::No' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="{{ '::Id' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="{{ '::Date' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="{{ '::ApplicationName' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="{{ '::VulnDescription' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="{{ '::Count' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="{{ '::Status' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="{{ '::Details' | abpLocalization }}" prop="">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ Data }}
+                  </ng-template>
+            </ngx-datatable-column>
+        </ngx-datatable>
+    </div>
+</div>

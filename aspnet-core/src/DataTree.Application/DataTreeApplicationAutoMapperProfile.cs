@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DataTree.Organizations;
+using DataTree.SubMembers;
 using Volo.Abp.Identity;
 
 namespace DataTree;
@@ -15,5 +16,7 @@ public class DataTreeApplicationAutoMapperProfile : Profile
         CreateMap<Organization, OrganizationDto>();
         CreateMap<OrganizationViewModel, OrganizationDto>();
         CreateMap<IdentityUser, UserDto>();
+
+        CreateMap<SubMember, SubMemberDto>();
     }
 }
